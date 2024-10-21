@@ -1,3 +1,4 @@
+  
 repeat wait() until game.Players.LocalPlayer
 
 if not game:IsLoaded() then
