@@ -12,6 +12,8 @@ if not game:IsLoaded() then
 	task.wait(10);
 end;
 
+_G.Settings.Configs["Select Team"] == "Pirate"
+
 _G.Settings = {
 
 	Main = {
@@ -285,7 +287,6 @@ repeat wait()
 		end
 	end
 until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
-
 -- [Place Id Check]
 local id = game.PlaceId
 if id == 2753915549 then World1 = true; elseif id == 4442272183 then World2 = true; elseif id == 7449423635 then World3 = true; else game:Shutdown() end;
