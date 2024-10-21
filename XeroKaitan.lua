@@ -1241,41 +1241,6 @@ end
 -----------------------------other
 task.spawn(
     function()
-        while task.wait() do
-            if game.Players.LocalPlayer.Team == nil then
-                pcall(
-                    function()
-                        if _G.Team == "Pirate" then
-                            game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Size =
-                                UDim2.new(10000, 1000, 10000, 1000)
-                            game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Position =
-                                UDim2.new(-4, 0, -5, 0)
-                            wait(.5)
-                            game:GetService("VirtualInputManager"):SendMouseButtonEvent(
-                                605,
-                                394,
-                                0,
-                                true,
-                                game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton,
-                                0
-                            )
-                            game:GetService("VirtualInputManager"):SendMouseButtonEvent(
-                                605,
-                                394,
-                                0,
-                                false,
-                                game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton,
-                                0
-                            )
-                        end
-                    end
-                )
-            end
-        end
-    end
-)
-task.spawn(
-    function()
         while wait() do
             if getgenv().LevelFarm then
                 for i, v in pairs(game.Workspace["_WorldOrigin"]:GetChildren()) do
